@@ -1,0 +1,8 @@
+<h1>Welcome to the homepage</h1>
+
+<% @fit.each do |fit| %>
+<div>
+  <h3><a href="/<%= $exercise.index @fit %>"><%= fit[:name] %></a></h3>
+  <p><%= fit[:rep] %></p>
+</div>
+<% end %>
