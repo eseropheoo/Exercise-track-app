@@ -78,7 +78,14 @@ class ExercisesController < Sinatra::Base
   	
   	put '/:id'  do
     
-    	"UPDATE: #{params[:id]}"
+    	 # Find correct post in array using id from url.
+	    id = params[:id].to_i
+	    # Change the parameters within that post (title and body).
+	    $exercise[id][:name] = params[:name]
+	    $exercise[id][:target_muscles] = params[:target_muscles]
+	    $exercise[id][:reps] = params[:reps]
+
+		redirect "/"
     
   	end
     
@@ -89,8 +96,10 @@ class ExercisesController < Sinatra::Base
   	end
     
   	get '/:id/edit'  do
+  		id = params[:id].to_i
+    	@fit = $exercise[id]
     
-    	"EDIT: #{params[:id]}"
+    	erb :"exercises/edit"
     
   	end
 

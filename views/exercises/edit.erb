@@ -1,0 +1,21 @@
+<form action="/<%= $exercise.index @fit %>" method="POST">
+
+	<input type="hidden" name="_method" value="PUT">
+	<div>
+		<label>Name</label>
+	  <input type="text" name="name" value ="<%= @fit[:name] %>" placeholder="Name of exercise">
+	</div>
+
+	<div>
+	  <label>Body</label>
+	  <textarea name="target_muscles" placeholder="The target muscles"><%= @fit[:target_muscles] %></textarea>
+	</div>
+	<div>
+		<label>Reps</label>
+	  	<input type="text" name="reps" value ="<%= @fit[:reps] %>" placeholder="No. of reps">
+	</div>
+
+	<div>
+	  <input type="submit" value="Save Post">
+	</div>
+</form>
