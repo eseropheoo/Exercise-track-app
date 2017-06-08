@@ -91,13 +91,13 @@ class ExercisesController < Sinatra::Base
     
  	delete '/:id'  do
     
-   		 id = params[:id].to_i
-   		 $exercise.delete_at(id)
+   		id = params[:id].to_i
+   		$exercise.delete_at(id)
+   		
+  	end
    		 redirect "/"
 
-
-    
-  	end
+	end
     
   	get '/:id/edit'  do
   		id = params[:id].to_i
