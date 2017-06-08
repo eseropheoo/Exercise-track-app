@@ -39,6 +39,13 @@ class ExercisesController < Sinatra::Base
   
     end
 
+    get '/new'  do
+    	@title = "Fit Track"
+    	
+    	erb :'/exercises/new'
+    
+  	end
+
   	get '/:id' do
     
 	    # get the ID and turn it in to an integer
@@ -53,18 +60,20 @@ class ExercisesController < Sinatra::Base
     
   	post '/' do
     
-  	  "CREATE"
-
-    
+		fit = {
+	      id: $exercise.length,
+	      name: params[:name],
+	      target_muscles: params[:target_muscles],
+	      reps: params[:reps]
+	    }
+	    puts fit
+	    $exercise.push fit
+	    redirect "/"    
     
   	end
     
     
-  	get '/new'  do
-    
-    	erb :'/exercises/new'
-    
-  	end
+  	
     
   	
   	put '/:id'  do
