@@ -47,7 +47,7 @@ class Exercise
 
     def update
         conn = Post.open_connection
-        sql = "UPDATE post SET title='#{self.title}', username='#{self.username}', target_muscle= '#{self.target_muscle}', body='#{self.body}', days_trained= '#{self.days_trained}', 
+        sql = "UPDATE fit SET title='#{self.title}', username='#{self.username}', target_muscle= '#{self.target_muscle}', body='#{self.body}', days_trained= '#{self.days_trained}', 
         diet= '#{self.diet}', reps= '#{self.reps}' 
          WHERE id = #{self.id}"
         conn.exec(sql)
@@ -56,7 +56,7 @@ class Exercise
 
     def self.find_and_update id, title, username, target_muscle, body, days_trained, diet, reps
         conn = self.open_connection
-        sql = "UPDATE post SET title='#{title}', body='#{body}' WHERE id = #{id}"
+        sql = "UPDATE fit SET title='#{title}', body='#{body}' WHERE id = #{id}"
         results = conn.exec(sql)
     end
 
