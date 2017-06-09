@@ -10,28 +10,29 @@ class ExercisesController < Sinatra::Base
       	register Sinatra::Reloader
     end
 
-    $exercise = [{
-      id: 0,
-      name: "pushups",
-      target_muscles: "arms,upper back, shoulders",
-      reps: "15"
-  	},
-  	{
-      id: 1,
-      name: "Squats",
-      target_muscles: "thighs, glutes, calves",
-      reps: "100"
-  	},
-  	{
-      id: 2,
-      name: "situps",
-      target_muscles: "abdomen",
-      reps: "50"
-  	}]
+   #  $exercise = [{
+   #    id: 0,
+   #    name: "pushups",
+   #    target_muscles: "arms,upper back, shoulders",
+   #    reps: "15"
+  	# },
+  	# {
+   #    id: 1,
+   #    name: "Squats",
+   #    target_muscles: "thighs, glutes, calves",
+   #    reps: "100"
+  	# },
+  	# {
+   #    id: 2,
+   #    name: "situps",
+   #    target_muscles: "abdomen",
+   #    reps: "50"
+  	# }]
 
   	get '/' do
 
       @title = " Fit Track"
+      # @fit = $exercise
 
       @fit = Exercise.all
   
