@@ -38,5 +38,7 @@ class Exercise
         self.hydrate results.first
     end
 
+    
+
 end
 

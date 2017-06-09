@@ -1,11 +1,14 @@
-<h1><%= @fit[:name] %></h1>
-<p> Muscles targeted: <%=@fit[:target_muscles] %></p>
-<p> Maximum reps: <%= @fit[:reps] %>  </p>
+<h1><%= @fit.username %></h1>
+<p> Muscles targeted: <%=@fit.target_muscle %></p>
+<p> <%=@fit.body %> </p>
+<p> <%=@fit.days_trained %> </p>
+<p> <%=@fit.diet %> </p>
+<p> Maximum reps: <%= @fit.reps %>  </p>
 <!-- a href only gets -->
-<a href="/<%= $exercise.index @fit %>/edit">edit</a>
+<a href="/<%= @fit.id %>/edit">edit</a>
 
 <!-- Create a delete button -->
-<form method="POST" action="/<%= @fit[:id] %>">
+<form method="POST" action="/<%= @fit.id%>">
 	<input type="hidden" name="_method" value="DELETE">
 	<input type="submit" value="Delete">
 </form>

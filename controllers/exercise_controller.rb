@@ -53,7 +53,7 @@ class ExercisesController < Sinatra::Base
 	    id = params[:id].to_i
 
 	    # make a single post object available in the template
-	    @fit = $exercise[id]
+	    @fit = Exercise.find id
 	    
 	    erb :'exercises/show'
     
