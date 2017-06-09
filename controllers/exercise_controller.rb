@@ -102,7 +102,7 @@ class ExercisesController < Sinatra::Base
     
   	get '/:id/edit'  do
   		id = params[:id].to_i
-    	@fit = $exercise[id]
+    	@fit = Exercise.find id
     
     	erb :"exercises/edit"
     

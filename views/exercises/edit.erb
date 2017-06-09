@@ -1,18 +1,28 @@
-<form action="/<%= $exercise.index @fit %>" method="POST">
+<form action="/<%= @fit.id %>" method="POST">
 
 	<input type="hidden" name="_method" value="PUT">
 	<div>
 		<label>Name</label>
-	  <input type="text" name="name" value ="<%= @fit[:name] %>" placeholder="Name of exercise">
+	  	<input type="text" name="username" value ="<%= @fit.username %>" placeholder="New username">
 	</div>
 
 	<div>
-	  <label>Body</label>
-	  <textarea name="target_muscles" placeholder="The target muscles"><%= @fit[:target_muscles] %></textarea>
+	  <label>target muscles</label>
+	  <textarea name="target_muscle" placeholder="The target muscles"><%= @fit.target_muscle%></textarea>
 	</div>
 	<div>
-		<label>Reps</label>
-	  	<input type="text" name="reps" value ="<%= @fit[:reps] %>" placeholder="No. of reps">
+	  <label>description</label>
+	  <textarea name="body" placeholder="description of how to perform the exercise"><%= @fit.body %></textarea>
+	</div>
+
+	<div>
+	  <label>Training days</label>
+	  <input type="text" name="days_trained" value ="<%= @fit.days_trained %>" placeholder="The No. of days you have started training">
+	</div>
+
+	<div>
+		<label>Diet</label>
+	  	<input type="text" name="diet" value ="<%= @fit.diet %>" placeholder="Typical daily diet">
 	</div>
 
 	<div>
