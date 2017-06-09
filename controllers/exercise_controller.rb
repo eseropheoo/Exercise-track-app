@@ -33,7 +33,7 @@ class ExercisesController < Sinatra::Base
 
       @title = " Fit Track"
 
-      @fit = $exercise
+      @fit = Exercise.all
   
       erb :'exercises/index'
   
@@ -94,7 +94,7 @@ class ExercisesController < Sinatra::Base
    		id = params[:id].to_i
    		$exercise.delete_at(id)
    		
-  	end
+  	
    		 redirect "/"
 
 	end
