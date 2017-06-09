@@ -2,7 +2,7 @@
 
 <% @fit.each do |fit| %>
 <div>
-  <h3><a href="/<%= $exercise.index fit %>"><%= fit[:name] %></a></h3>
+  <h3><a href="/<%= fit.id %>"><%= fit.title %></a></h3>
  
 </div>
 <% end %>
