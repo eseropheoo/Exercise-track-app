@@ -83,15 +83,15 @@ class ExercisesController < Sinatra::Base
     	 # Find correct post in array using id from url.
 	    id = params[:id].to_i
 	    # Change the parameters within that post (title and body).
-      title= params[:title]
+      
 	    username = params[:username]
       target_muscle = params[:target_muscle]    
       body = params[:body]      
-      days_trained = params[:days_trained]    
+      days_trained = params[:days_trained] ? params[:days_trained] : 0
       diet = params[:diet]    
-      reps = params[:reps]    
+      reps = params[:reps] ? params[:reps] : 0
           
-      Exercise.find_and_update(id, title, username, target_muscle, body, days_trained, diet, reps)  
+      Exercise.find_and_update(id, username, target_muscle, body, days_trained, diet, reps)  
       redirect "/"
 
 		end
