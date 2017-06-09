@@ -61,15 +61,16 @@ class ExercisesController < Sinatra::Base
     
   	post '/' do
     
-		fit = {
-	      id: $exercise.length,
-	      name: params[:name],
-	      target_muscles: params[:target_muscles],
-	      reps: params[:reps]
-	    }
-	    puts fit
-	    $exercise.push fit
-	    redirect "/"    
+		fit = Exercise.new
+    fit.title = params[:title]
+    fit.username = params[:username]
+    fit.target_muscle = params[:target_muscle]  
+    fit.body = params[:body]  
+    fit.days_trained = params[:days_trained]    
+    fit.diet = params[:diet]    
+    fit.reps = params[:reps]   
+    fit.save
+    redirect "/"
     
   	end
     
@@ -82,15 +83,15 @@ class ExercisesController < Sinatra::Base
     	 # Find correct post in array using id from url.
 	    id = params[:id].to_i
 	    # Change the parameters within that post (title and body).
+      title= params[:title]
 	    username = params[:username]
       target_muscle = params[:target_muscle]    
-      body = params[:body]    
-      target_muscle = params[:target_muscle]    
+      body = params[:body]      
       days_trained = params[:days_trained]    
       diet = params[:diet]    
       reps = params[:reps]    
           
-      Post.find_and_update(id, title, body)  
+      Exercise.find_and_update(id, title, username, target_muscle, body, days_trained, diet, reps)  
       redirect "/"
 
 		end

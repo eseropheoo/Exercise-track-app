@@ -1,17 +1,41 @@
 <br>
 <form action="/" method="POST">
 	<div>
-		<label>Name</label>
-	  <input type="text" name="name" placeholder="Name of the exercise">
+		<label>Title</label>
+	  <input type="text" name="title" placeholder="Name of the exercise">
 	</div> <br>
-
+	
+	<div>
+		<label>username</label>
+	  <input type="text" name="username" placeholder="Your user">
+	</div> <br>
+	
 	<div>
 	  <label>target muscles</label>
 	  <textarea name="target_muscle" placeholder= "The muscle groups you're focusing on"></textarea>
-	</div> <br>
+	</div>
 
-	<label>Reps</label>
-	  <input type="text" name="reps" placeholder="No. of reps">
+
+	<div>
+		<label>description</label>
+		<textarea name="body" placeholder="How to perfom the exercise"></textarea>
+	</div>
+
+	<div>
+		<label>Diet</label>
+		<textarea name="diet" placeholder="meal plan"></textarea>
+
+	</div>
+
+	<div>
+		<label>days_trained</label>
+		<input type="number" name="days_trained">
+	</div>
+
+	<div> <br>
+		<label>Reps</label>
+	 	 <input type="text" name="reps" placeholder="No. of reps">
+	</div>
 
 	<div>
 	  <input type="submit" value="Save Post">
