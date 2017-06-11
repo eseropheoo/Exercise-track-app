@@ -1,34 +1,42 @@
+
+<head>
+	<title><%= @title %></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<br>
 <form action="/<%= @fit.id %>" method="POST">
 
 	<input type="hidden" name="_method" value="PUT">
 	<div>
-		<label>Name</label>
+		<label>Username</label>
 	  	<input type="text" name="username" value ="<%= @fit.username %>" placeholder="New username">
-	</div>
+	</div> <br>
 
 	<div>
 	  <label>target muscles</label>
 	  <textarea name="target_muscle" placeholder="The target muscles"><%= @fit.target_muscle%></textarea>
-	</div>
+	</div> <br>
 	<div>
 	  <label>description</label>
 	  <textarea name="body" placeholder="description of how to perform the exercise"><%= @fit.body %></textarea>
-	</div>
+	</div> <br>
 
 	<div>
 	  <label>Training days</label>
 	  <input type="number" name="days_trained" value ="<%= @fit.days_trained %>" placeholder="The No. of days you have started training">
-	</div>
+	</div> <br>
 
 	<div>
 		<label>Diet</label>
 	  	<input type="text" name="diet" value ="<%= @fit.diet %>" placeholder="Typical daily diet">
-	</div>
+	</div> <br>
 
 	<div>
 		<label>Reps</label>
 	  	<input type="number" name="reps" value ="<%= @fit.diet %>" placeholder="Your maximum reps">
-	</div>
+	</div> <br>
 
 	<div>
 	  <input type="submit" value="Save Post">

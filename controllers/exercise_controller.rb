@@ -70,7 +70,7 @@ class ExercisesController < Sinatra::Base
       target_muscle = params[:target_muscle]    
       body = params[:body]      
       days_trained = params[:days_trained] ? params[:days_trained] : 0
-      diet = params[:diet]    
+      diet = params[:diet] 
       reps = params[:reps] ? params[:reps] : 0
           
       Exercise.find_and_update(id, username, target_muscle, body, days_trained, diet, reps)  

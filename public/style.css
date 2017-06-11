@@ -1,3 +1,27 @@
-#title {
-	color: blue;
+#fun {
+	color: red;
+	margin-left: 500px;
+}
+
+body {
+	background-color: #e3e5e8;
+}
+
+#new {
+	background-color: #e3e5e8;
+	}
+
+#exercise {
+	color: green;
+	margin-right: 500px;
+}
+
+#banner {
+	height:10vh;
+	font-size: 20px;
+	color: white;
+	background-image: url("run.jpg");
+	background-repeat: repeat-x;
+	width: 100%;
+	margin-top: 0px;
 }

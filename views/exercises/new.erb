@@ -1,43 +1,49 @@
+<head>
+	<h1><%= @title %></h1>
+</head>
+
 <br>
-<form action="/" method="POST">
-	<div>
-		<label>Title</label>
-	  <input type="text" name="title" placeholder="Name of the exercise">
-	</div> <br>
-	
-	<div>
-		<label>username</label>
-	  <input type="text" name="username" placeholder="Your user">
-	</div> <br>
-	
-	<div>
-	  <label>target muscles</label>
-	  <textarea name="target_muscle" placeholder= "The muscle groups you're focusing on"></textarea>
-	</div>
+<body id = "new">
+	<form action="/" method="POST">
+		<div>
+			<label>Title</label>
+		  <input type="text" name="title" placeholder="Name of the exercise">
+		</div> <br>
+		
+		<div>
+			<label>username</label>
+		  <input type="text" name="username" placeholder="Your username">
+		</div> <br>
+		
+		<div>
+		  <label>target muscles</label>
+		  <textarea name="target_muscle" placeholder= "The muscle groups you're focusing on"></textarea>
+		</div>
 
 
-	<div>
-		<label>description</label>
-		<textarea name="body" placeholder="How to perfom the exercise"></textarea>
-	</div>
+		<div>
+			<label>description</label>
+			<textarea name="body" placeholder="How to perfom the exercise" id = "description"></textarea>
+		</div>
 
-	<div>
-		<label>Diet</label>
-		<textarea name="diet" placeholder="meal plan"></textarea>
+		<div>
+			<label>Diet</label>
+			<textarea name="diet" placeholder="meal plan"></textarea>
 
-	</div>
+		</div>
 
-	<div>
-		<label>days_trained</label>
-		<input type="number" name="days_trained">
-	</div>
+		<div>
+			<label>days_trained</label>
+			<input type="number" name="days_trained">
+		</div>
 
-	<div> <br>
-		<label>Reps</label>
-	 	 <input type="text" name="reps" placeholder="No. of reps">
-	</div>
+		<div> <br>
+			<label>Reps</label>
+		 	 <input type="text" name="reps" placeholder="No. of reps">
+		</div>
 
-	<div>
-	  <input type="submit" value="Save Post">
-	</div>
-</form>
+		<div>
+		  <input type="submit" value="Save Post">
+		</div>
+	</form>
+</body>
