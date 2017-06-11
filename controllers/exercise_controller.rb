@@ -10,24 +10,6 @@ class ExercisesController < Sinatra::Base
       	register Sinatra::Reloader
     end
 
-   #  $exercise = [{
-   #    id: 0,
-   #    name: "pushups",
-   #    target_muscles: "arms,upper back, shoulders",
-   #    reps: "15"
-  	# },
-  	# {
-   #    id: 1,
-   #    name: "Squats",
-   #    target_muscles: "thighs, glutes, calves",
-   #    reps: "100"
-  	# },
-  	# {
-   #    id: 2,
-   #    name: "situps",
-   #    target_muscles: "abdomen",
-   #    reps: "50"
-  	# }]
 
   	get '/' do
 
@@ -61,16 +43,16 @@ class ExercisesController < Sinatra::Base
     
   	post '/' do
     
-		fit = Exercise.new
-    fit.title = params[:title]
-    fit.username = params[:username]
-    fit.target_muscle = params[:target_muscle]  
-    fit.body = params[:body]  
-    fit.days_trained = params[:days_trained]    
-    fit.diet = params[:diet]    
-    fit.reps = params[:reps]   
-    fit.save
-    redirect "/"
+  		fit = Exercise.new
+      fit.title = params[:title]
+      fit.username = params[:username]
+      fit.target_muscle = params[:target_muscle]  
+      fit.body = params[:body]  
+      fit.days_trained = params[:days_trained]    
+      fit.diet = params[:diet]    
+      fit.reps = params[:reps]   
+      fit.save
+      redirect "/"
     
   	end
     
@@ -97,11 +79,11 @@ class ExercisesController < Sinatra::Base
 		end
     
  	  delete '/:id'  do
-    id = params[:id].to_i
-    Exercise.destroy id
-    redirect "/"
+      id = params[:id].to_i
+      Exercise.destroy id
+      redirect "/"
 
-	 end
+	  end
     
   	get '/:id/edit'  do
   		id = params[:id].to_i
@@ -109,7 +91,7 @@ class ExercisesController < Sinatra::Base
     
     	erb :"exercises/edit"
     
-  	end
+    end
 
 
 
