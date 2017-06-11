@@ -60,5 +60,11 @@ class Exercise
         results = conn.exec(sql)
     end
 
+    def self.destroy id 
+        conn = self.open_connection
+        sql = "DELETE FROM fit WHERE id = #{id}"
+        conn.exec(sql)
+    end
+
 end
 
