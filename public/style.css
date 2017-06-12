@@ -6,26 +6,30 @@
 	
 	text-align: center;
 	margin-top: 40px;
+
 }
 
 body {
-	background-color: white;
+	background-blend-mode: color-dodge;
 
 }
 
 .head {
 	color: #FFFFFF;
 	margin-left: 0px;
-	border: ridge;
-	margin-top: 0px;
-	background-color: rgba(48, 44, 44, 0.2);
+	
+	margin-top: -20px;
+	background-color: rgba(48, 44, 44, 0.8);
 	height: 70px;
 
 
 }
 
 
-
+.thumbnail {
+	height: 20px;
+	width: 20px;
+}
 
 #new {
 	background-color:#FFFFFF ;
@@ -33,20 +37,26 @@ body {
 
 #exercise {
 	color: green;
-	margin-bottom: : 60px;
+	margin-top: : 500px;
+	margin-left:30px;
+	display: flex;
+
 	
 }
 
 
 
 #intro {
-	margin-left: 50px;
+	margin-left: 300px;
+	margin-top: 80px;
 	height: 30px;
 	width: 40px;
 	border-style: none;
+	display: inline-flex;
 }
 
 #learn {
 	
-	margin-right: 400px;
+	margin-left: 10px;
+	margin-top: - 80px;
 }
