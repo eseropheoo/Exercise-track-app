@@ -10,7 +10,7 @@ body {
 }
 
 #new {
-	background-color: #e3e5e8;
+	background-color:#FFFFFF ;
 	}
 
 #exercise {
@@ -26,7 +26,7 @@ body {
 	background-image: url("run.jpg");
 	background-repeat: repeat-x;
 	text-align: center;
-	line-height:75px;
+	line-height: 45px;
 	width: 100%;
 	margin-top: 460px;
 }
