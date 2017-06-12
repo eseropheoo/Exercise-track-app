@@ -3,25 +3,19 @@
 <body>
 	
 
-	<div class="jumbotron">
+	
 	<p><a class="btn btn-primary btn-lg" href="/new" role="button" id ="learn">add an exercise</a></p>
 	  <h1 id ="fun">Welcome to the Fit track</h1> 
-	  <!-- <p>...</p> -->
-	  
-	</div>
-  
-	<div class="row">
+		
+
 		<% @fit.each do |fit | %> 
 
-		    <div class="col-xs-6 col-md-3">
-		    	<a href="/<%= fit.id %>" class="thumbnail">
-		     		<img src="push.gif" alt="...">
-		     		<h3><%= fit.title %></h3>
-		    	</a>
-		  	</div>
-		<% end %>
+		<h3><a href="/<%= fit.id %>"><%= fit.title %></a></h3>
+		 
 
-	</div>	
+		<% end %>
+	</div>
+	
 	
 </body>
 
