@@ -20,22 +20,24 @@ body {
 	
 	margin-top: -20px;
 	background-color: rgba(48, 44, 44, 1);
-	height: 70px;
+	height: 100px;
 
 
 }
 #slogan1 {
 	margin-left: 20px;
+	display: inline-block;
 }
 #slogan2 {
 	font-size: 12px;
 	line-height: 2px;
 	margin-left: 20px;
-	margin-top: -15px;
+	margin-top: 5px;
 }
 #new-page {
-	margin-top: -30px;
+	margin-top: -50px;
 	margin-left: 700px;
+	font-size: 22px;
 
 }
 
