@@ -1,10 +1,12 @@
 #fun {
 	color: red;
 	margin-left: 500px;
+	margin-top: 40px;
 }
 
 body {
-	background-color: #e3e5e8;
+	background-image: -webkit-linear-gradient(top, #FFFFFF 70%, #23A31A 100%);
+
 }
 
 #new {
@@ -13,15 +15,18 @@ body {
 
 #exercise {
 	color: green;
-	margin-right: 500px;
+	margin-bottom: : 60px;
+	
 }
 
 #banner {
 	height:10vh;
 	font-size: 20px;
-	color: white;
+	color: black;
 	background-image: url("run.jpg");
 	background-repeat: repeat-x;
+	text-align: center;
+	line-height:75px;
 	width: 100%;
-	margin-top: 0px;
+	margin-top: 460px;
 }
