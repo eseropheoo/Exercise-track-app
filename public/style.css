@@ -19,16 +19,10 @@ body {
 	margin-left: 0px;
 	
 	margin-top: -20px;
-	background-color: rgba(48, 44, 44, 0.8);
+	background-color: rgba(48, 44, 44, 0.2);
 	height: 70px;
 
 
-}
-
-
-.thumbnail {
-	height: 20px;
-	width: 20px;
 }
 
 #new {
@@ -39,9 +33,6 @@ body {
 	color: green;
 	margin-top: : 500px;
 	margin-left:30px;
-	display: flex;
-
-	
 }
 
 

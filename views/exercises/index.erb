@@ -11,26 +11,17 @@
 	</div>
   
 	<div class="row">
-	  <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	     	<% @fit.each do |fit | %>  <img src="push.gif" alt="...">
-	     	<h3><a id= "exercise" href="/<%= fit.id %>"><%= fit.title %></a></h3>
-	    </a>
-	  </div>
-	 
+		<% @fit.each do |fit | %> 
 
-     
-  
-	
-	
-		
+		    <div class="col-xs-6 col-md-3">
+		    	<a href="/<%= fit.id %>" class="thumbnail">
+		     		<img src="push.gif" alt="...">
+		     		<h3><%= fit.title %></h3>
+		    	</a>
+		  	</div>
+		<% end %>
 
-		
-		 
-
-	<% end %>
-	</div>
-	
+	</div>	
 	
 </body>
 
