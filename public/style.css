@@ -1,11 +1,15 @@
 #fun {
-	color: red;
+	color: #094ab5;
+	font: bold;
+	text-shadow: -70px 26px 6px rgba(9, 74, 181, 0.52);
+    margin: 10px 10px 10px 10px;
+	
 	margin-left: 500px;
 	margin-top: 40px;
 }
 
 body {
-	background-image: -webkit-linear-gradient(top, #FFFFFF 70%, #23A31A 100%);
+	background-image: -webkit-linear-gradient(top, #F5F5DC 70%, #23A31A 100%);
 
 }
 
