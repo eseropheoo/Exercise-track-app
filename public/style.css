@@ -28,5 +28,9 @@ body {
 	text-align: center;
 	line-height: 45px;
 	width: 100%;
-	margin-top: 460px;
+	margin-top: 500px;
+}
+
+#intro {
+	margin-left: 500px;
 }
