@@ -1,16 +1,30 @@
 
 
-<body id ="home">
-	<h1 id ="fun">Welcome to the Fit track</h1> 
+<body>
+	
 
-	<div> </div>
+	<div class="jumbotron">
+	  <h1 id ="fun">Welcome to the Fit track</h1> 
+	  <!-- <p>...</p> -->
+	  <p><a class="btn btn-primary btn-lg" href="#" role="button" id ="learn">Learn more</a></p>
+	</div>
+  
+	<div class="row">
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	     	<img src="push.gif" alt="..." id = "intro">
+	    </a>
+	  </div>
+  
+	</div>
 
-	<% @fit.each do |fit | %>
+		<% @fit.each do |fit | %>
 
-	<h3><a id= "exercise" href="/<%= fit.id %>"><%= fit.title %></a></h3>
-	 
+		<h3><a id= "exercise" href="/<%= fit.id %>"><%= fit.title %></a></h3>
+		 
 
-	<% end %>
+		<% end %>
+	</ul>
 
 	
 </body>

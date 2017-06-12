@@ -4,20 +4,28 @@
 	text-shadow: -70px 26px 6px rgba(9, 74, 181, 0.52);
     margin: 10px 10px 10px 10px;
 	
-	margin-left: 500px;
+	text-align: center;
 	margin-top: 40px;
 }
 
 body {
-	background-image: -webkit-linear-gradient(top, #F5F5DC 70%, #23A31A 100%);
+	background-color: white;
 
 }
 
-#home {
-	background-image: url("run_shoes.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%; 
+.head {
+	color: #FFFFFF;
+	margin-left: 0px;
+	border: ridge;
+	margin-top: 0px;
+	background-color: rgba(48, 44, 44, 0.2);
+	height: 70px;
+
+
 }
+
+
+
 
 #new {
 	background-color:#FFFFFF ;
@@ -29,18 +37,16 @@ body {
 	
 }
 
-#banner {
-	height:10vh;
-	font-size: 20px;
-	color: black;
-	background-image: url("run.jpg");
-	background-repeat: repeat-x;
-	text-align: center;
-	line-height: 45px;
-	width: 100%;
-	margin-top: 445px;
-}
+
 
 #intro {
-	margin-left: 500px;
+	margin-left: 50px;
+	height: 30px;
+	width: 40px;
+	border-style: none;
+}
+
+#learn {
+	
+	margin-right: 400px;
 }
