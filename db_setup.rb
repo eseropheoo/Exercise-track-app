@@ -24,7 +24,7 @@ class DatabaseSetup
 		diet TEXT NOT NULL,
 		reps SERIAL NOT NULL,
 		image VARCHAR(100) NOT NULL
-		PRIMARY KEY(id)
+		PRIMARY KEY (id)
 		);"
 
 		conn.exec(sql)
