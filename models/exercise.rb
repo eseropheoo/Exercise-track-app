@@ -14,7 +14,7 @@ class Exercise
             PG.connect(dbname: "exercise")
         end
     end
-    
+
     def self.hydrate exercise_data
         exercise = self.new
         exercise.title = exercise_data['title']
@@ -77,6 +77,5 @@ class Exercise
         sql = "DELETE FROM fit WHERE id = #{id}"
         conn.exec(sql)
     end
-
 end
 
