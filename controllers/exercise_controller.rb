@@ -51,6 +51,7 @@ class ExercisesController < Sinatra::Base
       fit.days_trained = params[:days_trained]    
       fit.diet = params[:diet]    
       fit.reps = params[:reps]   
+      fit.image = params[:image]
       fit.save
       redirect "/"
     

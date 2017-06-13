@@ -1,5 +1,5 @@
 class Exercise
-    attr_accessor :title, :id, :username, :target_muscle, :body, :days_trained, :diet, :reps
+    attr_accessor :title, :id, :username, :target_muscle, :body, :days_trained, :diet, :reps, :image
 
     def self.open_connection
         PG.connect(dbname: "exercise")
@@ -14,13 +14,14 @@ class Exercise
         exercise.days_trained = exercise_data['days_trained']
         exercise.diet = exercise_data['diet']
         exercise.reps = exercise_data['reps']
+        exercise.image = exercise_data['image']
 
         exercise
     end
     # INDEX
     def self.all
         conn = self.open_connection
-        sql = "SELECT title,id,username,target_muscle, body,days_trained,diet,reps FROM fit ORDER BY id"
+        sql = "SELECT title,id,username,target_muscle, body,days_trained,diet,reps,image FROM fit ORDER BY id"
         results = conn.exec(sql)
 
         # create an array of exercise objects
@@ -32,7 +33,7 @@ class Exercise
     end
     def self.find id
         conn = self.open_connection
-        sql = "SELECT title,id,username,target_muscle,body,days_trained,diet,reps FROM fit WHERE id = #{id}"
+        sql = "SELECT title,id,username,target_muscle,body,days_trained,diet,reps,image FROM fit WHERE id = #{id}"
         results = conn.exec(sql)
 
         self.hydrate results.first
@@ -40,14 +41,14 @@ class Exercise
 
     def save
         conn = Exercise.open_connection
-        sql = "INSERT INTO fit (title, username,target_muscle,body,days_trained,diet,reps) VALUES ('#{self.title}', '#{self.username}', '#{self.target_muscle}', '#{self.body}', '#{self.days_trained}', '#{self.diet}', '#{self.reps}')"
+        sql = "INSERT INTO fit (title, username,target_muscle,body,days_trained,diet,reps,image) VALUES ('#{self.title}', '#{self.username}', '#{self.target_muscle}', '#{self.body}', '#{self.days_trained}', '#{self.diet}', '#{self.reps}', '#{self.image}')"
         conn.exec(sql)
     end
 
     def update
         conn = Exercise.open_connection
         sql = "UPDATE fit SET username='#{self.username}', target_muscle= '#{self.target_muscle}', body='#{self.body}', days_trained= '#{self.days_trained}', 
-        diet= '#{self.diet}', reps= '#{self.reps}' 
+        diet= '#{self.diet}', reps= '#{self.reps}', image= '#{self.image}'
          WHERE id = #{self.id}"
         conn.exec(sql)
     end
