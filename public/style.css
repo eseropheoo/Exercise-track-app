@@ -72,6 +72,16 @@ body {
 	-webkit-transform: rotate(270deg);
 }
 
+#FB {
+	height: 38px;
+	width: 80px;
+	line-height: 0.7px;
+	margin-left: 1200px;
+	margin-top: -65px;
+	
+	display: inline-flex;
+}
+
 #exercise {
 	color: green;
 	margin-top: 20px;
