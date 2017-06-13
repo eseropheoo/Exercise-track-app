@@ -2,7 +2,7 @@ class Exercise
     attr_accessor :title, :id, :username, :target_muscle, :body, :days_trained, :diet, :reps, :image
 
     def self.open_connection
-        db = ENV['DATABASE_URL'] || "exercise"
+        db = ENV['DATABASE_URL'] ? ENV['DATABASE_URL'] : "exercise"
         PG.connect(dbname: db)
     end
     def self.hydrate exercise_data
