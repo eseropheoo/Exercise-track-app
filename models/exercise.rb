@@ -2,9 +2,19 @@ class Exercise
     attr_accessor :title, :id, :username, :target_muscle, :body, :days_trained, :diet, :reps, :image
 
     def self.open_connection
-        db = ENV['DATABASE_URL'] ? ENV['DATABASE_URL'] : "exercise"
-        PG.connect(dbname: db)
+        if ENV['DATABASE_URL']
+            PG.connect({
+                dbname: ENV['DB_NAME'], 
+                host: ENV['DB_HOST'],
+                port: ENV['DB_PORT'],
+                user: ENV['DB_USERNAME'],
+                password: ENV['DB_PASSWORD']
+            })
+        else
+            PG.connect(dbname: "exercise")
+        end
     end
+    
     def self.hydrate exercise_data
         exercise = self.new
         exercise.title = exercise_data['title']
