@@ -73,6 +73,7 @@ class ExercisesController < Sinatra::Base
       days_trained = params[:days_trained] ? params[:days_trained] : 0
       diet = params[:diet] 
       reps = params[:reps] ? params[:reps] : 0
+      image = params[:image] 
           
       Exercise.find_and_update(id, username, target_muscle, body, days_trained, diet, reps)  
       redirect "/"
