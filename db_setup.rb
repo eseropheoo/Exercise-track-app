@@ -23,7 +23,7 @@ class DatabaseSetup
 		days_trained SERIAL NOT NULL,
 		diet TEXT NOT NULL,
 		reps SERIAL NOT NULL,
-		image VARCHAR(100) NOT NULL
+		image VARCHAR(100) NOT NULL,
 		PRIMARY KEY id
 		);"
 
