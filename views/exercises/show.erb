@@ -5,14 +5,11 @@
 <p> Diet: <%=@fit.diet %> </p>
 <p> Maximum reps: <%= @fit.reps %>  </p>
 <!-- a href only gets -->
-<a href="/<%= @fit.id %>/edit">edit</a> 
+<a id ="edit" href="/<%= @fit.id %>/edit">edit</a> 
 
 <!-- Create a delete button -->
-<style type="text/css">
-	body {
-		background-repeat: none;
-	}
-</style>
+
+
 
 <form method="POST" action="/<%= @fit.id%>">
 	<input type="hidden" name="_method" value="DELETE">

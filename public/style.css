@@ -49,21 +49,15 @@ body {
 
 #new {
 	background-color:#FFFFFF ;
+	padding: 17px;
 	}
 #me {
 		margin-left: 470px;
 		margin-top: -250px;
 		width: 650px;
 		height: 400px;
-		padding: 7px;
+		
 		border: solid;
-		
-
-
-		
-		 
-		/*-*//*webkit-box-shadow: 18px 24px 41px 14px rgba(0,0,0,0.51);*/
-        /*-moz-box-shadow: 18px 24px 41px 14px rgba(0,0,0,0.51);*/
         box-shadow: 18px 24px 41px 14px rgba(0,0,0,0.51);
     }
 #pic {
